@@ -6,11 +6,6 @@ This is a BitTorrentClient using NodeJS, Typescript and this has a basic downloa
 -   It sends all the block request in one go which I think is the cause my app breaks sometime in the middle
 -   It very poorly arcitechtured.
 
-## Project Demo
-
-<a href="https://www.youtube.com/embed/_2_l_oklbDk?si=1vZK5gJY7CA_JH9O" target="_blank"><img src="http://img.youtube.com/vi/_2_l_oklbDk/0.jpg" 
-alt="Project Demo Video Link" width="max-content" /></a>
-
 ## The Project Refrences
 
 The links below are the project and documents that I have refered to while building the project (apart from stackoverflow 😜)

@@ -1,7 +1,7 @@
 import net from "net";
+import { socket } from "../udp";
 import { Queue } from "../datastructures/Queue";
 import { LocalStorage, torrentInfo } from "../data/LocalStorage";
-import { socket } from "../udp";
 import { requestPacket } from "../Packets/request_packet";
 
 const BLOCK_LEN = Math.pow(2, 14);
@@ -18,6 +18,7 @@ export interface connectionProperties {
 }
 
 export const chokeHandler = (
+	
 	socket: net.Socket,
 	connectionProperties: connectionProperties
 ) => {

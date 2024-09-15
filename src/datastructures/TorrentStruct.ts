@@ -1,6 +1,6 @@
 import crypto from "crypto";
 import { LocalStorage } from "../data/LocalStorage";
-import bencodec, { encode } from "bencodec";
+import bencodec,  {encode}  from "bencodec";
 
 interface torrentFile {
 	announce: Buffer;

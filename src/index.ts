@@ -19,6 +19,6 @@ app.get("/", (req: Request, res: Response) => {
 app.use("/api/download", DownloadRouter);
 
 // Running our server on a port
-app.listen(process.env.PORT || 5000, () => {
+app.listen(process.env.PORT, () => {
 	console.log("The server is running at port ", process.env.PORT || 5000);
 });

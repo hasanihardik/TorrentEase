@@ -1,24 +1,40 @@
-<form class="mt-3" id="file-in-form" action="/api/download" method="post">
-	<label
-		class="border-dashed border-8 w-full h-56 mx-auto p-2 rounded-md place-content-center grid"
-		for="file-in"
-	>
-		<p class="text-6xl text-center">Click to upload your file</p>
-		<p></p>
-	</label>
-	<input type="file" required name="file-in" id="file-in" class="hidden" />
-	<button
-		class="px-3 py-1 m-2 border-sky-400 border-2 rounded-lg bg-sky-200 hover:bg-white hover:border-gray-800 hover:text-sky-400"
-		type="submit"
-	>
-		Submit
-	</button>
+<form class="mt-3" id="file-in-form" action="/api/download" method="post" enctype="multipart/form-data">
+    <label
+        class="border-dashed border-8 w-full h-56 mx-auto p-2 rounded-md place-content-center grid"
+        for="file-in"
+    >
+        <p class="text-6xl text-center">Click to upload your file</p>
+        <p></p>
+    </label>
+    <input type="file" required name="torrentFile" id="file-in" class="hidden" />
+    <button
+        class="px-3 py-1 m-2 border-sky-400 border-2 rounded-lg bg-sky-200 hover:bg-white hover:border-gray-800 hover:text-sky-400"
+        type="submit"
+    >
+        Submit
+    </button>
 </form>
 
 <script>
-	function submit(e) {
-		// e.preventDefault();
-	}
-	const ele = document.getElementById("file-in-form");
-	ele.onsubmit = submit;
+    function submit(e) {
+        e.preventDefault(); // Prevent the default form submission
+
+        const form = document.getElementById("file-in-form");
+        const formData = new FormData(form);
+
+        fetch(form.action, {
+            method: form.method,
+            body: formData,
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log("Success:", data);
+        })
+        .catch(error => {
+            console.error("Error:", error);
+        });
+    }
+
+    const ele = document.getElementById("file-in-form");
+    ele.addEventListener("submit", submit);
 </script>

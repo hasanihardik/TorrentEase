@@ -5,7 +5,7 @@ import { initiateHandShake } from "./helper/handshake"
 require("dotenv").config;
 
 // If you ever make change in this line also make the same change in Announce Packet file
-const udpPort: number = process.env.UDP_PORT !== undefined ? parseInt(process.env.UDP_PORT) : 6881;
+const udpPort: number = process.env.UDP_PORT !== undefined ? parseInt(process.env.UDP_PORT) : 3881;
 
 export const socket = dgram.createSocket("udp4");
 socket.bind(udpPort);

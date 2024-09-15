@@ -1,44 +1,20 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Bit-Torrent Client (Peer to Peer protocol)
 
-## Available Scripts
+This is a BitTorrentClient using NodeJS, Typescript and this has a basic download endpoint which when provided a torrent file start downloading the data from the peers following the Standard Bit Torrent Protocol. It's a vary basic project and thus have a lot of limitation. Currently I am not thinking of improving it but If I get some time I might come back to it. The Current limitations that I know of are:
 
-In the project directory, you can run:
+-   It only supports upd protocol for the tracker.
+-   It sends all the block request in one go which I think is the cause my app breaks sometime in the middle
+-   It very poorly arcitechtured.
 
-### `yarn start`
+## Project Demo
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<a href="https://www.youtube.com/embed/_2_l_oklbDk?si=1vZK5gJY7CA_JH9O" target="_blank"><img src="http://img.youtube.com/vi/_2_l_oklbDk/0.jpg" 
+alt="Project Demo Video Link" width="max-content" /></a>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## The Project Refrences
 
-### `yarn test`
+The links below are the project and documents that I have refered to while building the project (apart from stackoverflow 😜)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+-   https://www.bittorrent.org/beps/bep_0015.html
+-   https://wiki.theory.org/BitTorrentSpecification
+-   https://allenkim67.github.io/programming/2016/05/04/how-to-make-your-own-bittorrent-client.html (really helpful time to time)
